@@ -10,7 +10,9 @@
   "author": "levish",
   "license": "MIT",
   "dependencies": {
-    "vue": "^3.0.0"
+    "vue": "^3.0.0",
+    "dayjs": "^1.10.4",
+    "@hebcal/core": "^2.0.0"
   },
   "peerDependencies": {
     "vue": "^3.0.0"
