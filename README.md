@@ -31,7 +31,7 @@ app.mount('#app');
 ### Local Registration
 
 In your component:
-```javascript
+```vue
 <template>
     <HDatePicker v-model="selectedDate" label="Select Date" id="hebrew-datepicker" />
 </template>
