@@ -20,62 +20,40 @@ npm i vue3-hebrew-date-picker
 ### Global Registration
 
 In your `main.js`:
-
-javascript
-
-CopyEdit
-
-`import { createApp } from  'vue'; import  App  from  './App.vue'; import  DatePicker  from  'my-vue-datepicker'; const app = createApp(App);
-app.component('DatePicker', DatePicker);
-app.mount('#app');` 
-
+```javascript
+import { createApp } from 'vue';
+import App from './App.vue';
+import HDatePicker from 'vue3-hebrew-date-picker';
+const app = createApp(App);
+app.component('HDatePicker', HDatePicker);
+app.mount('#app');
+```
 ### Local Registration
 
 In your component:
+```javascript
+<template>
+    <HDatePicker v-model="selectedDate" label="Select Date" id="hebrew-datepicker" />
+</template>
 
-javascript
+<script setup>
+import { ref } from 'vue';
+import HDatePicker from 'vue3-hebrew-date-picker';
+const selectedDate = ref(''); 
+</script>
 
-CopyEdit
-
-`<template> <DatePicker  v-model="selectedDate"  label="Select Date"  id="hebrew-datepicker"/>
-</template> <script  setup> import { ref } from  'vue'; import  DatePicker  from  'my-vue-datepicker'; const selectedDate = ref(''); </script>` 
+``` 
 
 ## Props
 
-Prop
+| Prop        | Type    | Description                                           |
+|-------------|---------|-------------------------------------------------------|
+| `modelValue`| String  | The selected date in `YYYY-MM-DD` format              |
+| `label`     | String  | The label text for the date picker                    |
+| `id`        | String  | The ID attribute for the date picker input            |
+| `error`     | Boolean | If set to `true`, shows an error state                |
 
-Type
-
-Description
-
-`modelValue`
-
-String
-
-The selected date in `YYYY-MM-DD` format
-
-`label`
-
-String
-
-The label text for the date picker
-
-`id`
-
-String
-
-The ID attribute for the date picker input
-
-`error`
-
-Boolean
-
-If set to `true`, shows an error state
 
 ## License
 
 This project is licensed under the MIT License - see the LICENSE file for details.
-
-kotlin
-
-CopyEdit
